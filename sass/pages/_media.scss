@@ -1,0 +1,12 @@
+@include respond(tablet-port) {}
+
+// 600px
+@include respond(tablet-land) {}
+
+// 900px
+@include respond(desktop) {}
+
+// 1200px
+@include respond(big-desktop) {}
+
+// 1800px

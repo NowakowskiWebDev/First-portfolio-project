@@ -1,0 +1,21 @@
+.about {
+
+    height: min-content;
+    padding: 50px;
+    text-align: center;
+    background-image: url(../img/background-about-1280.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 1.2;
+
+    font-size: 2rem;
+
+    &__paragraph {
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 1rem 1rem rgba(black, .2);
+    }
+}
