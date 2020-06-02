@@ -17,10 +17,10 @@
     &__h1 {
         text-align: center;
         color: #fff;
-        margin: 12rem 0 4rem;
+        margin: 7rem 0 4rem;
 
         &--main {
-            font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+            font-family: $font-special;
             font-size: 8rem;
         }
 
@@ -48,7 +48,7 @@
         position: absolute;
         right: 50px;
         bottom: 50px;
-        font-size: 3rem;
+        font-size: 4rem;
 
         .smile {
             transform: rotate(-40deg);
@@ -60,61 +60,6 @@
             opacity: 0;
             transform: rotate(40deg);
             animation: laughting-laught 2s infinite;
-        }
-    }
-}
-
-@include respond(tablet-port) {
-    // 600px
-
-    .header {
-        background-image:
-            url(../img/background-header-1280.jpg);
-
-        &__h1 {
-            margin: 5rem 0 7rem;
-
-            &--main {
-                font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
-                font-size: 7rem;
-            }
-
-            &--sub {
-                display: block;
-                font-size: 3rem;
-            }
-        }
-
-        .btn {
-            font-weight: 700;
-            color: $color-chocolate;
-            font-size: 1rem;
-        }
-
-        .btn--header {
-            i {
-                color: $color-chocolate;
-                margin-left: 5px;
-            }
-        }
-
-        &__happy {
-            position: absolute;
-            right: 50px;
-            bottom: 50px;
-            font-size: 5rem;
-
-            .smile {
-                transform: rotate(-40deg);
-                opacity: 1;
-                animation: laughting-smile 2s infinite;
-            }
-
-            .laugh {
-                opacity: 0;
-                transform: rotate(40deg);
-                animation: laughting-laught 2s infinite;
-            }
         }
     }
 }

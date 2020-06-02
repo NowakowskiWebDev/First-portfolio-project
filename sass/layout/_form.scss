@@ -6,6 +6,8 @@
 }
 
 .form {
+    font-size: 1.5rem;
+
     &__h3 {
         font-size: 2rem;
         padding: 1.5rem 2rem;
@@ -40,8 +42,9 @@
 
     &__btn {
         font-weight: 700;
-        font-size: 1.4rem;
+        font-size: inherit;
         margin-bottom: 1rem;
+        color: $color-chocolate;
     }
 
 }

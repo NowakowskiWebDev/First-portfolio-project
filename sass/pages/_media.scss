@@ -1,12 +1,186 @@
-@include respond(tablet-port) {}
+@media only screen and (min-width: 37.5em) and (orientation:portrait) {
 
-// 600px
-@include respond(tablet-land) {}
+    // MEDIA FOR HEADER 600px
+    .header {
+        height: 100vh;
+        background-image:
+            url(../img/background-header-1280.jpg);
 
-// 900px
-@include respond(desktop) {}
 
-// 1200px
-@include respond(big-desktop) {}
+        &__text-box {
+            @include flexCenter;
+            font-size: 2rem;
+        }
 
-// 1800px
+        &__h1 {
+            text-align: center;
+            color: $color-white;
+            margin: 3rem 0 20rem;
+
+            &--main {
+                font-size: 12rem;
+            }
+        }
+
+        &__happy {
+            font-size: 5rem;
+        }
+    }
+}
+
+@include respond(tablet-port) {
+
+    // MEDIA FOR ABOUT 600px
+    .about {
+        padding: 100px;
+        line-height: 1.6;
+        font-size: 2.5rem;
+
+        &__paragraph {
+            padding: 3rem;
+        }
+    }
+
+    // MEDIA FOR PRODUCTS 600px
+    .products {
+        margin: 1rem 1rem;
+        font-size: 1.8rem;
+
+        .product {
+
+            &__picture {
+
+                &-1 {
+                    height: 20rem;
+                    width: 20rem;
+                    border-radius: 10px;
+                    margin-bottom: 2rem;
+                    text-align: center;
+
+                    &--none {
+                        display: inline-block;
+                        margin-left: 3rem;
+                    }
+                }
+
+
+
+                &-2 {
+                    &--none {
+                        display: inline-block;
+                        margin-left: 3rem;
+                    }
+                }
+
+                &-3 {
+                    &--none {
+                        display: inline-block;
+                        margin-left: 3rem;
+                    }
+                }
+
+                &-4 {
+                    &--none {
+                        display: inline-block;
+                        margin-left: 3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // MEDIA FOR FORM 600px
+    .contact {
+        // width: 100%;
+
+
+        .form {
+
+            &__h3 {
+                font-size: 2.5rem;
+                padding: 2rem 2rem;
+            }
+
+
+            &__input {
+                width: 30rem;
+            }
+
+            &__label {
+                width: 11rem;
+                font-size: 1.4rem;
+                transform: translate(22rem, -6rem);
+            }
+
+
+
+            &__area {
+                width: 35rem;
+            }
+
+        }
+
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $color-chocolate;
+        background-image: linear-gradient(to right bottom, $color-brown, $color-light);
+
+        &__contact {
+            font-size: 4rem;
+            margin: 1rem 0;
+        }
+
+        &__list {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            align-content: stretch;
+        }
+
+        &__item {
+            font-size: 1.5rem;
+            padding: 0 0 2rem;
+            width: 100%;
+
+            i {
+                margin-right: 15px;
+                font-size: 2rem;
+            }
+
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+@include respond(tablet-land) {
+    // 900px
+
+}
+
+@include respond(desktop) {
+    // 1200px
+
+}
+
+@include respond(big-desktop) {
+    // 1800px
+
+}
