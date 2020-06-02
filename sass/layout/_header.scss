@@ -53,13 +53,13 @@
         .smile {
             transform: rotate(-40deg);
             opacity: 1;
-            animation: laughting-smile 2s infinite;
+            animation: change-smile 2s infinite;
         }
 
         .laugh {
             opacity: 0;
             transform: rotate(40deg);
-            animation: laughting-laught 2s infinite;
+            animation: change-happy 2s infinite;
         }
     }
 }

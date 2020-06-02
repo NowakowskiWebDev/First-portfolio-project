@@ -9,7 +9,7 @@
 
         &__text-box {
             @include flexCenter;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         &__h1 {
@@ -43,7 +43,7 @@
 
     // MEDIA FOR PRODUCTS 600px
     .products {
-        margin: 1rem 1rem;
+        margin: 1rem 4rem;
         font-size: 1.8rem;
 
         .product {
@@ -171,8 +171,132 @@
 
 
 @include respond(tablet-land) {
-    // 900px
+    .header {
+        background-image:
+            url(../img/background-header-1280.jpg);
+        position: relative;
 
+
+        &__text-box {
+            font-size: 2rem;
+        }
+
+        &__h1 {
+            margin: 7rem 0 10rem;
+
+            &--main {
+                font-size: 13rem;
+            }
+        }
+
+        &__happy {
+            position: absolute;
+            font-size: 7rem;
+
+            .smile {
+                position: absolute;
+                top: -150px;
+                left: -150px;
+                opacity: 1;
+                transform: rotate(0deg);
+                animation: rotate-smile 3s infinite linear;
+            }
+
+            .laugh {
+                position: absolute;
+                top: -150px;
+                left: -150px;
+                opacity: 0;
+                transform: rotate(0deg);
+                animation: rotate-happy 3s infinite linear;
+            }
+        }
+    }
+
+    .about {
+
+        line-height: 1.6;
+
+        font-size: 2rem;
+
+        &__paragraph {
+            padding: 5rem;
+        }
+    }
+
+    .workers {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+
+        margin: 0 auto 5rem;
+        height: 60vh;
+
+
+        &__video {
+            z-index: -1;
+            opacity: .15;
+            margin: 0 auto;
+
+
+            &__content {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+            }
+        }
+
+        &__article {
+            text-align: center;
+            position: absolute;
+            width: 50%;
+
+            &-h3 {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            &-paragraph {
+                font-size: 2rem;
+                line-height: 1.6;
+                font-weight: 700;
+            }
+        }
+
+
+        &__svg-left {
+
+            &--1 {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                height: 125px;
+                width: 125px;
+                opacity: 1;
+                animation: icon-wedding infinite 15s linear;
+            }
+
+            &--2 {
+                @extend .workers__svg-left--1;
+                top: 310px;
+                opacity: 0;
+                animation: icon-wedding infinite 15s 5s linear;
+            }
+
+            &--3 {
+                position: absolute;
+                top: 150px;
+                right: 10px;
+                height: 125px;
+                width: 125px;
+                opacity: 0;
+                animation: icon-wedding infinite 15s 10s linear;
+            }
+        }
+    }
 }
 
 @include respond(desktop) {
