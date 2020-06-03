@@ -159,14 +159,7 @@
 
     // MEDIA FOR HEADER 900px
     .header {
-        // background-image:
-        //     url(../img/background-header-1280.jpg);
         position: relative;
-
-
-        // &__text-box {
-        //     font-size: 1.8rem;
-        // }
 
         &__h1 {
             margin: 5rem 0 10rem;
@@ -225,7 +218,7 @@
 
         .product {
             box-shadow: 0 0 1rem 1rem rgba(black, .2);
-            background: white;
+            background: $color-white;
             border-radius: 0;
             padding: 0;
             margin: 5rem;
@@ -266,8 +259,8 @@
             &__h3 {
                 align-self: center;
                 margin: 0 auto;
-                padding: 0 2rem;
-                font-size: 2rem;
+                padding: 2rem;
+                font-size: 1.8rem;
             }
         }
 
@@ -359,12 +352,132 @@
 
 }
 
-@include respond(ktop) {
-    // 1200px
+@include respond(desktop) {
 
-}
+    // MEDIA FOR HEADER 1200px
+    .header {
+        height: 100vh;
+        background-image:
+            url(../img/background-header-1280.jpg);
 
-@include respond(big-desktop) {
-    // 1800px
+
+        &__text-box {
+            font-size: 1.8rem;
+        }
+
+        &__h1 {
+            margin: 7rem 0 20rem;
+
+            &--main {
+                font-size: 10rem;
+            }
+        }
+
+
+    }
+
+    // MEDIA FOR ABOUT 1200px
+    .about {
+        height: 40vh;
+        padding: 50px;
+        text-align: center;
+
+        font-size: 2.5rem;
+
+        &__paragraph {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 4rem;
+        }
+    }
+
+    // MEDIA FOR PRODUCTS 1200px
+    .products {
+        padding: 2rem 2rem 4rem;
+        font-size: 1.5rem;
+
+        display: grid;
+        grid-template-areas:
+            'header header'
+            'row1-1 row1-2'
+            'row2-1 row2-2';
+
+
+        &__h2 {
+            grid-area: header;
+            font-size: 9rem;
+        }
+
+        .product {
+            margin: 2rem;
+
+            &__picture {
+                &-1 {
+                    width: 30rem;
+                }
+            }
+
+            &__h3 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    // MEDIA FOR WEDDING 1200px
+    .wedding {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin: 5rem 4rem;
+        height: min-content;
+
+
+        &__video {
+            opacity: 1;
+            margin: 0;
+        }
+
+        &__article {
+            color: $color-chocolate;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 0 10rem;
+
+
+
+
+            &-svg {
+                display: none;
+            }
+        }
+    }
+
+
+    // MEDIA FOR CONTACT 1200px
+    .contact {
+        .book-form {
+            background-image:
+                url(../img/form-1920.jpg);
+        }
+
+        .form {
+            &__h3 {
+                font-size: 3rem;
+                padding: 2rem 2rem;
+            }
+        }
+    }
+
+
+
 
 }
