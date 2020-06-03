@@ -217,7 +217,7 @@
         }
 
         .product {
-            box-shadow: 0 0 1rem 1rem rgba(black, .2);
+            box-shadow: $box-shadow;
             background: $color-white;
             border-radius: 0;
             padding: 0;

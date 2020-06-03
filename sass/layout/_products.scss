@@ -11,7 +11,7 @@
     }
 
     .product {
-        box-shadow: 0 0 1rem 1rem rgba(black, .2);
+        box-shadow: $box-shadow;
 
         border-radius: 10px;
         padding: 2.5rem;
